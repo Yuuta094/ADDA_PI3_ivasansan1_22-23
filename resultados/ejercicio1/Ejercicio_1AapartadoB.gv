@@ -1,0 +1,37 @@
+strict digraph G {
+  1 [ color="red" label="Paco1943" ];
+  2 [ color="red" label="Pepa1943" ];
+  3 [ color="red" label="Edu1959" ];
+  4 [ color="red" label="Lola1963" ];
+  5 [ color="red" label="Juan1966" ];
+  6 [ color="red" label="Laura1965" ];
+  7 [ color="red" label="Manuel1982" ];
+  8 [ color="red" label="Carmen1989" ];
+  9 [ color="red" label="Antonio1989" ];
+  10 [ color="red" label="Pablo1991" ];
+  11 [ color="red" label="Ana1985" ];
+  12 [ color="red" label="Patricia2010" ];
+  13 [ color="red" label="Maria2008" ];
+  14 [ color="red" label="Sara2015" ];
+  15 [ color="red" label="Marta2018" ];
+  16 [ color="red" label="Rafael2020" ];
+  17 [ color="red" label="Lourdes1986" ];
+  1 -> 3 [ color="black" ];
+  2 -> 3 [ color="black" ];
+  3 -> 8 [ color="black" ];
+  4 -> 8 [ color="black" ];
+  5 -> 9 [ color="black" ];
+  5 -> 10 [ color="black" ];
+  6 -> 9 [ color="black" ];
+  6 -> 10 [ color="black" ];
+  7 -> 13 [ color="black" ];
+  8 -> 13 [ color="black" ];
+  7 -> 12 [ color="black" ];
+  8 -> 12 [ color="black" ];
+  8 -> 14 [ color="black" ];
+  9 -> 14 [ color="black" ];
+  10 -> 15 [ color="black" ];
+  11 -> 15 [ color="black" ];
+  10 -> 16 [ color="black" ];
+  17 -> 16 [ color="black" ];
+}
