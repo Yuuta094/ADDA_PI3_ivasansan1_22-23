@@ -1,0 +1,37 @@
+strict digraph G {
+  1 [ label="Paco, Cadiz, 1943" ];
+  2 [ label="Pepa, Cadiz, 1943" ];
+  3 [ label="Edu, Jerez, 1959" ];
+  4 [ label="Lola, Madrid, 1963" ];
+  5 [ label="Juan, Sevilla, 1966" ];
+  6 [ label="Laura, Sevilla, 1965" ];
+  7 [ label="Manuel, Madrid, 1982" ];
+  8 [ label="Carmen, Jaen, 1989" ];
+  9 [ label="Antonio, Jaen, 1989" ];
+  10 [ label="Pablo, Sevilla, 1991" ];
+  11 [ label="Ana, Cadiz, 1985" ];
+  12 [ label="Patricia, Cordoba, 2010" ];
+  13 [ label="Maria, Sevilla, 2008" ];
+  14 [ label="Sara, Jaen, 2015" ];
+  15 [ label="Marta, Sevilla, 2018" ];
+  16 [ label="Rafael, Malaga, 2020" ];
+  17 [ label="Lourdes, Malaga, 1986" ];
+  1 -> 3 [ ];
+  2 -> 3 [ ];
+  3 -> 8 [ ];
+  4 -> 8 [ ];
+  5 -> 9 [ ];
+  5 -> 10 [ ];
+  6 -> 9 [ ];
+  6 -> 10 [ ];
+  7 -> 13 [ ];
+  8 -> 13 [ ];
+  7 -> 12 [ ];
+  8 -> 12 [ ];
+  8 -> 14 [ ];
+  9 -> 14 [ ];
+  10 -> 15 [ ];
+  11 -> 15 [ ];
+  10 -> 16 [ ];
+  17 -> 16 [ ];
+}
