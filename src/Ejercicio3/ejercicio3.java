@@ -17,12 +17,15 @@ import us.lsi.colors.GraphColors.Color;
 
 public class ejercicio3 {
 
-	public static void apartadoB(Graph<Actividad, DefaultEdge> g, String file, String nombreVista) {
+	public static void apartadoAyB(Graph<Actividad, DefaultEdge> g, String file, String nombreVista) {
 		
 		VertexColoringAlgorithm<Actividad> verColor= new GreedyColoring<>(g);
 		Coloring<Actividad> sol =verColor.getColoring();  //obetener los colores
+		
+		//Apartado A
 		System.out.println("Numero de franjas: "+ sol.getNumberColors());
 		List<Set<Actividad>> franjas = sol.getColorClasses();
+		
 		for(int i=0; i< franjas.size() ;i++) {
 			System.out.println("Franja numero "+i+ franjas.get(i));
 		}
@@ -37,15 +40,5 @@ public class ejercicio3 {
 		);
 		
 	}
-	
-	
-	
-	/*
-	 * Apartado A: Determine qué actividades deberían impartirse en paralelo y cuántas
-	 * franjas horarias son necesarias, teniendo en cuenta que no se pueden poner en
-	 * paralelo actividades que tengan alumnos en común.
-	 * 
-	 */
-
 
 }

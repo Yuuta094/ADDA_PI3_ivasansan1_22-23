@@ -33,7 +33,7 @@ public static void main(String[] args) {
 				}
 			}
 		});
-		Ejercicio3.ejercicio3.apartadoB(g, file, "ApartadoB");
+		Ejercicio3.ejercicio3.apartadoAyB(g, file, "ApartadoB");
 	}
 
 
