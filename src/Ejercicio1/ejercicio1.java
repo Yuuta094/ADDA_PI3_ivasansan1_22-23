@@ -115,17 +115,13 @@ public class ejercicio1 {
 	//aplicar Dijstrack
 	
 
-	public static void apartadoC(SimpleDirectedGraph<Persona, Hijo> g, String file, String nombreVista, String p1, String p2) {
-		
+	public static void apartadoC(Graph<Persona, Hijo> g, String file, String nombreVista, String p1, String p2) {
 			
+			Persona per1 = g.vertexSet().stream().filter(c->c.nombre().equals(p1)).findFirst().get();  //Obtenemos la raiz 
+			Persona per2 = g.vertexSet().stream().filter(c->c.nombre().equals(p2)).findFirst().get();  //Obtenemos la raiz 
 			
-			Persona per1 = g.vertexSet().stream().filter(c->c.nombre().equals("Sara")).findFirst().get();  //Obtenemos la raiz 
-			Persona per2 = g.vertexSet().stream().filter(c->c.nombre().equals("Rafael")).findFirst().get();  //Obtenemos la raiz 
-			
-			DijkstraShortestPath<Persona, Hijo> alg= new DijkstraShortestPath<>(g); 
-	
-			Integer len= alg.getPath(per1,per2).getLength();
-			
+			DijkstraShortestPath<Persona, Hijo> alg= new DijkstraShortestPath<Persona, Hijo>(g); 
+			Integer len= alg.getPath(per1, per2).getLength();	
 	
 			if(len==2) {
 				System.out.println(p1+" y "+ p2+ " son Hermanos");

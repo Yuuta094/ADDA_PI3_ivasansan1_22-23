@@ -14,15 +14,12 @@ public class test1 {
 
 	public static void main(String[] args) {
 			
-			ApartadoA("1A");
-			ApartadoB("1A", "Maria");
-			//ApartadoC("1A", "Rafael", "Sara");
-			ApartadoD("1A");
-			ApartadoE("1A");
-		}
-	
-	
-	
+			ApartadoA("1B");
+			ApartadoB("1B", "Raquel");
+			ApartadoC("1B", "Raquel", "Alvaro");
+			ApartadoD("1B");
+			ApartadoE("1B");
+		}	
 	
 		public static SimpleDirectedGraph<Persona, Hijo> Grafo(String file) {
 			SimpleDirectedGraph<Persona, Hijo> g= GraphsReader.newGraph("ficheros/PI3E"+ file + "_DatosEntrada.txt",
@@ -63,8 +60,13 @@ public class test1 {
 		}
 			
 		public static void ApartadoC(String file, String p1, String p2) {
-		
-			SimpleDirectedGraph<Persona, Hijo> g= Grafo(file);
+			
+			//Hace falta un grafo simple para Dijkstra
+			Graph<Persona, Hijo> g= GraphsReader.newGraph("ficheros/PI3E"+ file + "_DatosEntrada.txt",  
+					Persona::ofFormat,  //factoria vértices
+					Hijo::ofFormat, //factoria aristas
+					Graphs2::simpleGraph //Grafo sin peso y con dirección
+					);
 			Ejercicio1.ejercicio1.apartadoC(g, file,"apartadoC", p1, p2);
 		}
 		
